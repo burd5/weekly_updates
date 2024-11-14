@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Book Tracker</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .input-group {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+    .input-group label {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .input-group input, .input-group select {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #fafafa;
+    }
+    .input-group input:focus, .input-group select:focus {
+      outline: none;
+      border-color: #5b9bd5;
+      background-color: #fff;
+    }
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .button {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      background-color: #5b9bd5;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 48%;
+    }
+    .button:hover {
+      background-color: #4691d8;
+    }
+    .button:focus {
+      outline: none;
+    }
+    .button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Track Your Book</h1>
+    
+    <div class="input-group">
+      <label for="bookTitle">Book Title</label>
+      <input type="text" id="bookTitle" placeholder="Enter book title">
+    </div>
+
+    <div class="input-group">
+      <label for="authorName">Author Name</label>
+      <input type="text" id="authorName" placeholder="Enter author name">
+    </div>
+
+    <div class="input-group">
+      <label for="genre">Genre</label>
+      <select id="genre">
+        <option value="" disabled selected>Select genre</option>
+        <option value="fiction">Fiction</option>
+        <option value="non-fiction">Non-Fiction</option>
+        <option value="mystery">Mystery</option>
+        <option value="romance">Romance</option>
+        <option value="sci-fi">Sci-Fi</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="biography">Biography</option>
+      </select>
+    </div>
+
+    <div class="button-group">
+      <button class="button" id="trackBtn">Track</button>
+      <button class="button" id="recommendBtn">Recommend Something Similar</button>
+    </div>
+  </div>
+
+</body>
+</html>
